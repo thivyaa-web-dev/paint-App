@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paint App</title>
+    <link href="style.css" rel="stylesheet">
+    <script src="js/app.js" type="module" defer></script>
+</head>
+
+<body>
+    <div class="toolbox left">
+        <div class="group commands">
+            <div class="item" data-command="undo" title="Undo">
+                <img src="images/undo-icon.png">
+            </div>
+            <div class="item" data-command="download" title="Download">
+                <img src="images/download-icon.png">
+            </div>
+        </div>
+
+
+        <div class="group shapes">
+            <div class="item active" data-tool="line" title="Line Tool">
+                <img src="images/line-icon.png">
+            </div>
+            <div class="item active" data-tool="rectangle" title="Rectangle Tool">
+                <img src="images/rect-icon.png">
+            </div>
+            <div class="item active" data-tool="circle" title="Circle Tool">
+                <img src="images/circle-icon.png">
+            </div>
+            <div class="item active" data-tool="triangle" title="Triangle Tool">
+                <img src="images/tri-icon.png">
+            </div>
+        </div>
+
+        <div class="group tools">
+
+            <div class="item" data-tool="pencil" title="Pencil Tool">
+                <img src="images/pencil-icon.png">
+            </div>
+            <div class="item" data-tool="brush" title="Brush Tool">
+                <img src="images/brush-icon.png">
+            </div>
+            <div class="item" data-tool="paint-bucket" title="paint-bucket Tool">
+                <img src="images/paint-bucket-icon.png">
+            </div>
+            <div class="item" data-tool="eraser" title="Eraser Tool">
+                <img src="images/eraser-icon.png">
+            </div>
+        </div>
+        <div class="group linewidths for-shapes" style="display:block;">
+            <div class="item active" data-line-width="1" title="1 Pixel">
+                <div class="linewidth" style="width:1px;height:1px"></div>
+            </div>
+
+            <div class="item" data-line-width="2" title="2 Pixel">
+                <div class="linewidth" style="width:2px;height:2px"></div>
+            </div>
+
+            <div class="item" data-line-width="3" title="3 Pixel">
+                <div class="linewidth" style="width:3px;height:3px"></div>
+            </div>
+            <div class="item" data-line-width="4" title="4 Pixel">
+                <div class="linewidth" style="width:4px;height:4px"></div>
+            </div>
+            <div class="item" data-line-width="5" title="5 Pixel">
+                <div class="linewidth" style="width:5px;height:5px"></div>
+            </div>
+
+        </div>
+
+
+
+        <div class="group linewidths for-brush" style="display:none;">
+            <div class="item active" data-brush-size="4" title="4 Pixel">
+                <div class="linewidth" style="width:4px;height:4px"></div>
+            </div>
+
+            <div class="item" data-brush-size="6" title="6 Pixel">
+                <div class="linewidth" style="width:6px;height:6px"></div>
+            </div>
+
+            <div class="item" data-brush-size="8" title="8 Pixel">
+                <div class="linewidth" style="width:8px;height:8px"></div>
+            </div>
+            <div class="item" data-brush-size="10" title="10 Pixel">
+                <div class="linewidth" style="width:10px;height:10px"></div>
+            </div>
+            <div class="item" data-brush-size="12" title="12 Pixel">
+                <div class="linewidth" style="width:12px;height:12px"></div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+    <canvas id="canvas" width="640" height="480">
+
+
+    </canvas>
+
+
+
+
+    <div class="toolbox right">
+        <div class="group swatches">
+            <div class="item" data-color="#ffffff">
+                <div class="swatch" style="background-color:#ffffff;"></div>
+            </div>
+            <div class="item active" data-color="#000000">
+                <div class="swatch" style="background-color:#000000;"></div>
+            </div>
+            <div class="item" data-color="#ff0000">
+                <div class="swatch" style="background-color:#ff0000;"></div>
+            </div>
+            <div class="item" data-color="#00ff00">
+                <div class="swatch" style="background-color:#00ff00;"></div>
+            </div>
+            <div class="item" data-color="#0000ff">
+                <div class="swatch" style="background-color:#0000ff;"></div>
+            </div>
+            <div class="item" data-color="#00ffff">
+                <div class="swatch" style="background-color:#00ffff;"></div>
+            </div>
+            <div class="item" data-color="#ea00ff">
+                <div class="swatch" style="background-color:#ea00ff;"></div>
+            </div>
+            <div class="item" data-color="#ffe600">
+                <div class="swatch" style="background-color:#ffe600;"></div>
+            </div>
+            <div class="item" data-color="#ff8800cc">
+                <div class="swatch" style="background-color:#ff8800cc;"></div>
+            </div>
+            <div class="item" data-color="#00ffc8ab">
+                <div class="swatch" style="background-color:#00ffc8ab;"></div>
+            </div>
+            <div class="item" data-color="#da0e8b86">
+                <div class="swatch" style="background-color:#da0e8b86;"></div>
+            </div>
+            <div class="item" data-color="#ff8800cc">
+                <div class="swatch" style="background-color:#ff8800cc;"></div>
+            </div>
+            <div class="item" data-color="#f8f2f1ab">
+                <div class="swatch" style="background-color:#f8f2f1ab;"></div>
+            </div>
+            <div class="item" data-color="#a36fe486">
+                <div class="swatch" style="background-color:#a36fe486;"></div>
+            </div>
+            
+        </div>
+
+
+
+    </div>
+
+
+</body>
+
+</html>
